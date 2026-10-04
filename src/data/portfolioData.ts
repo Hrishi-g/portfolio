@@ -45,7 +45,7 @@ export const personalData = {
   email: "hrishikeshrgupta@gmail.com",
   socials: {
     github: "https://github.com/Hrishi-g",
-    linkedin: "https://linkedin.com/in/",
+    linkedin: "https://linkedin.com/in/hrishig",
     email: "mailto:hrishikeshrgupta@gmail.com"
   }
 };
