@@ -1,0 +1,28 @@
+---
+import { personalData } from '../data/portfolioData';
+---
+
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[#09090b]/80 border-b border-zinc-800/60">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="font-mono text-base font-semibold tracking-tight text-zinc-100 hover:text-zinc-400 transition-colors">
+      {personalData.name.split(' ')[0]}<span class="text-zinc-500">.dev</span>
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
+      <a href="#about" class="hover:text-zinc-100 transition-colors">About</a>
+      <a href="#experience" class="hover:text-zinc-100 transition-colors">Experience</a>
+      <a href="#projects" class="hover:text-zinc-100 transition-colors">Projects</a>
+      <a href="#skills" class="hover:text-zinc-100 transition-colors">Skills</a>
+      <a href="#contact" class="hover:text-zinc-100 transition-colors">Contact</a>
+    </nav>
+
+    <div class="flex items-center space-x-3">
+      <a 
+        href="#contact" 
+        class="text-xs font-mono px-3.5 py-1.5 rounded-full border border-zinc-700 bg-zinc-900 text-zinc-200 hover:bg-zinc-800 hover:border-zinc-500 transition-all"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</header>

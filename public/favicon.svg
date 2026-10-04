@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Dark Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Yellow / Gold Gradient Tint -->
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="35%" stop-color="#facc15" />
+      <stop offset="70%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Yellow Radial Glow -->
+    <filter id="yellowGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Dark Container -->
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#bgGrad)" stroke="#27272a" stroke-width="16" />
+  
+  <!-- Subtle Yellow Inner Border Tint -->
+  <rect x="48" y="48" width="416" height="416" rx="96" fill="none" stroke="url(#yellowGrad)" stroke-width="4" stroke-opacity="0.35" />
+
+  <!-- Yellow Curly Braces { } -->
+  <g fill="none" stroke="url(#yellowGrad)" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" filter="url(#yellowGlow)">
+    <!-- Left Curly Brace { -->
+    <path d="M 216 148 C 184 148 168 168 168 200 V 232 C 168 248 152 256 136 256 C 152 256 168 264 168 280 V 312 C 168 344 184 364 216 364" />
+    
+    <!-- Right Curly Brace } -->
+    <path d="M 296 148 C 328 148 344 168 344 200 V 232 C 344 248 360 256 376 256 C 360 256 344 264 344 280 V 312 C 344 344 328 364 296 364" />
+  </g>
+</svg>

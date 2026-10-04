@@ -1,0 +1,74 @@
+---
+import { experienceData, educationData } from '../data/portfolioData';
+---
+
+<section id="experience" class="py-16 max-w-5xl mx-auto px-6 border-t border-zinc-800/60">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <!-- Work Experience (Takes 2 columns) -->
+    <div class="lg:col-span-2 flex flex-col space-y-6">
+      <div>
+        <h2 class="text-xs md:text-sm font-mono uppercase tracking-widest text-zinc-400 mb-2">Professional Experience</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-zinc-100">Work Experience</h3>
+      </div>
+
+      <div class="space-y-8 border-l border-zinc-800 pl-6">
+        {experienceData.map((exp) => (
+          <div class="relative group">
+            <span class="absolute -left-[31px] top-2 w-2.5 h-2.5 rounded-full bg-zinc-600 group-hover:bg-zinc-200 transition-colors"></span>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 gap-1">
+              <h4 class="text-xl md:text-2xl font-semibold text-zinc-100">{exp.role}</h4>
+              <span class="text-xs md:text-sm font-mono text-zinc-400">{exp.period}</span>
+            </div>
+            
+            <p class="text-base font-medium text-zinc-300 mb-1">{exp.company}</p>
+            {exp.projectTitle && (
+              <p class="text-sm font-mono text-emerald-400 mb-3">Project: {exp.projectTitle}</p>
+            )}
+
+            <ul class="space-y-2.5 mb-5">
+              {exp.description.map((item) => (
+                <li class="text-sm md:text-base text-zinc-300 leading-relaxed flex items-start">
+                  <span class="text-zinc-500 mr-2 font-mono">&bull;</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="flex flex-wrap gap-2">
+              {exp.technologies.map((tech) => (
+                <span class="text-xs font-mono text-zinc-300 bg-zinc-900 px-2.5 py-1 rounded border border-zinc-800">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Education (Takes 1 column) -->
+    <div class="flex flex-col space-y-6">
+      <div>
+        <h2 class="text-xs md:text-sm font-mono uppercase tracking-widest text-zinc-400 mb-2">Academic</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-zinc-100">Education</h3>
+      </div>
+
+      <div class="space-y-6 border-l border-zinc-800 pl-6">
+        {educationData.map((edu) => (
+          <div class="relative group">
+            <span class="absolute -left-[31px] top-2 w-2.5 h-2.5 rounded-full bg-zinc-600 group-hover:bg-zinc-200 transition-colors"></span>
+            
+            <h4 class="text-lg md:text-xl font-semibold text-zinc-100 mb-1">{edu.degree}</h4>
+            <p class="text-sm font-mono text-zinc-300 mb-1">{edu.institution}</p>
+            <p class="text-xs md:text-sm font-mono text-zinc-400 mb-3">{edu.period} &bull; {edu.location}</p>
+
+            {edu.details && (
+              <p class="text-sm text-zinc-400 leading-relaxed">{edu.details}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
